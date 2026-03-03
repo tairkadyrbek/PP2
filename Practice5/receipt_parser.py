@@ -15,6 +15,9 @@ def parse_receipt(filename):
         r'([\d ]+,\d{2})'     # total like "308,00"
     )
     matches = re.findall(item_pattern, text, re.DOTALL)
+    # matches is now a list of tuples:
+    # [("Натрия хлорид...", "2,000", "154,00", "308,00"), ...]
+
     
     products = []
     for name, quantity, unit_price, total in matches:
