@@ -140,16 +140,13 @@ def main():
     create_table()
     
     while True:
-        print("\n================================")
-        print("         PHONEBOOK APP        ")
-        print("================================")
-        print("  1. Import contacts from CSV")
-        print("  2. Add a new contact")
-        print("  3. Update a contact")
-        print("  4. Search contacts")
-        print("  5. Delete a contact")
-        print("  0. Exit")
-        print("================================")
+        print("PHONEBOOK APP")
+        print("1 - Import contacts from CSV")
+        print("2 - Add a new contact")
+        print("3 - Update a contact")
+        print("4 - Search contacts")
+        print("5 - Delete a contact")
+        print("0 - Exit")
         
         choice = input("Choose an option: ").strip()
         
@@ -167,7 +164,7 @@ def main():
             print("Goodbye!")
             break
         else:
-            print("Invalid option. Please try again.")
+            print("Invalid option")
 
 if __name__ == '__main__':
     main()
