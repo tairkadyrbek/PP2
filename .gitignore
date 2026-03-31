@@ -1,0 +1,5 @@
+venv/
+*.рус
+database.ini
+.vscode
+__pycache__
