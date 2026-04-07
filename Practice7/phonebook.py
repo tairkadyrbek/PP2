@@ -20,7 +20,7 @@ def create_table():
             
     print("Table ready.")
     
-# 2. Insert from console
+# 2. Insert from csv
 def insert_from_csv(filepath='contacts.csv'):
     import csv
     with get_conn() as conn:
