@@ -53,7 +53,7 @@ def insert_many():
     
     while True:
         username = input("Username (empty to stop): ").strip()
-        if not username:
+        if not username:    # stop loop if user presses enter with no input
             break
         phone = input("Phone: ").strip()
         
@@ -64,7 +64,7 @@ def insert_many():
         with get_conn() as conn:
             with conn.cursor() as cur:
                 cur.execute("CALL insert_many_contacts(%s, %s)", (usernames, phones))
-
+                # CALL no return data
         print("Done.")
 
 # 4. Paginated view
@@ -88,7 +88,7 @@ def delete_contact():
     
     if choice == '1':
         value  = input("Username: ").strip()
-        p_type = 'username'
+        p_type = 'username'  # tells the procedure what to delete by
     elif choice == '2':
         value  = input("Phone: ").strip()
         p_type = 'phone'
