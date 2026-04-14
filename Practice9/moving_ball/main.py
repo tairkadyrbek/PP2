@@ -8,6 +8,8 @@ WIDTH, HEIGHT = 600, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Moving Ball")
 
+clock = pygame.time.Clock() # for frame rate control
+
 # Ball
 x, y = 300, 300
 radius = 25
@@ -38,6 +40,7 @@ while running:
     ball.draw_ball(screen, x, y, radius)
     
     pygame.display.flip()
+    clock.tick(60)
     
 pygame.quit()
 sys.exit()
