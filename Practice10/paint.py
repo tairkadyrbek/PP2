@@ -7,8 +7,6 @@ def main():
     
     # Brush settings
     radius = 15
-    x = 0
-    y = 0
     mode = 'blue'  # Current color mode
     tool = 'brush'  # Current tool: 'brush', 'rectangle', 'circle', 'eraser'
     points = []
@@ -17,14 +15,8 @@ def main():
     shape_start = None  # Starting point for rectangle/circle
     drawing_shape = False
     
-    # Track if mouse button is currently pressed
-    mouse_pressed = False
-    
     # Eraser settings
     eraser_size = 20
-    
-    # Mouse button state
-    mouse_pressed = False
     
     # Available colors
     colors = {
